@@ -14,9 +14,9 @@ import org.codehaus.jettison.json.JSONException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.colorc.user.register.utils.MarshalCollection;
 import com.colorcc.common.annotation.AnnotationHelper;
 import com.colorcc.user.register.marshal.Marshaller;
+import com.colorcc.user.register.utils.MarshalCollection;
 
 public abstract class JavaToJsonWriter<T> implements MessageBodyWriter<T> {
 
