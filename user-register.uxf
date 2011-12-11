@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.3">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Interface</type>
+    <coordinates>
+      <x>230</x>
+      <y>120</y>
+      <w>220</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>UserResource
+--
++ getUser(Long id) : Response
++ createUser() : Response</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.SimpleComponent</type>
+    <coordinates>
+      <x>200</x>
+      <y>60</y>
+      <w>270</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>UserAPI</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.SimpleComponent</type>
+    <coordinates>
+      <x>60</x>
+      <y>300</y>
+      <w>620</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>UserService</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>120</x>
+      <y>340</y>
+      <w>160</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>UserService
+--
++getUser(Long id)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>310</x>
+      <y>340</y>
+      <w>160</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>UserBean
+--
+-id: Long
+-name: String
+...
+--
++setId(Long id)
++getId():Long
+...</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

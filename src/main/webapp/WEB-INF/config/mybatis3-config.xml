@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias alias="registerUser" type="com.colorcc.user.register.model.User" />
+		<typeAlias alias="registerUserGroup" type="com.colorcc.user.register.model.UserGroup" />
+	</typeAliases>
+	<mappers>
+		<mapper resource="com/colorcc/user/register/mapper/UserMapper.xml" />
+		<mapper resource="com/colorcc/user/register/mapper/UserGroupMapper.xml" />
+	</mappers>
+</configuration>
