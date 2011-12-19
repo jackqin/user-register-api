@@ -3,7 +3,9 @@ package com.colorcc.user.register.utils;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.colorcc.user.register.bean.BeanList;
 import com.colorcc.user.register.marshal.Marshaller;
+import com.colorcc.user.register.marshal.marshaller.BeanListMarshaller;
 import com.colorcc.user.register.marshal.marshaller.DefaultMarshaller;
 import com.colorcc.user.register.marshal.marshaller.UserBeanMarshaller;
 
@@ -19,6 +21,7 @@ public class MarshalCollection {
 	static {
 		marshallerMap.put("default", new DefaultMarshaller());
 		marshallerMap.put("userBean", new UserBeanMarshaller());
+		marshallerMap.put("beanList", new BeanListMarshaller<BeanList<?>>());
 	}
 
 	public static MarshalCollection getInstance() {

@@ -44,6 +44,12 @@ public abstract class JavaToJsonWriter<T> implements MessageBodyWriter<T> {
 			if (logger.isDebugEnabled()) {
 				logger.debug(jsonString);
 			}
+			
+			if (jsonString == null) {
+				jsonString = "";
+				return  -1;
+			}
+			
 			return jsonString.length();
 
 		} else {

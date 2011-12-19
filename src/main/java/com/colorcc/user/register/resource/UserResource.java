@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import com.colorcc.user.register.bean.BeanList;
 import com.colorcc.user.register.bean.UserBean;
 import com.colorcc.user.register.service.UserService;
 
@@ -31,6 +32,19 @@ public class UserResource {
 
 	@Autowired
 	UserService userServiceImpl;
+	
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response getUsers() {
+		Long startRow = 0L;
+		int fetchRows = 5;
+		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ start");
+		
+		BeanList<UserBean> beanList = new BeanList<UserBean>();
+		beanList.setBeanList(userServiceImpl.getUserList(startRow, fetchRows));
+		
+		return Response.ok().entity(beanList).build();
+	}
 
 	@GET
 	@Path("/{id}")
